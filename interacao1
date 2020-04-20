@@ -1,0 +1,74 @@
+# Interação 1 - Desafio Sanar (Italo Xesteres)
+print('Olá, como vai? Seja muito bem-vindo(a) ao SanarFlix' )
+print('Me chamo Italo, faço parte da equipe de sucesso do cliente,'
+      ' e o meu objetivo é ser o seu principal aliado '
+      'em toda a sua jornada em medicina :D')
+nome_cli = input('Por gentileza, poderia me falar seu nome? ')
+print(f'É um prazer enorme te conhecer, {nome_cli}!')
+formado = input('Me tira uma dúvida, você já concluiu a graduação? ')
+formado_s = ['sim','SIM','Sim']
+formado_n = ['não','nao','Não','NÃO','NAO']
+id = 0
+cursos_SF = {'anatomia': 0, 'atendimento pré-hospitalar': 1, 'biofísica': 2,
+          'biologia molecular': 3, 'bioquímica': 4, 'cardiologia': 5,
+          'cirurgia': 6, 'tcc': 7, 'paliativos': 8, 'dermatologia': 9,
+          'ecg': 10, 'embriologia': 11, 'endocrinologia': 12, 'exames laboratoriais': 13,
+          'farmacologia': 14, 'fisiologia': 15, 'gastro': 16, 'genética': 17, 'geriatria': 18,
+          'ginecologia': 19, 'hematologia': 20, 'hepatologia': 21, 'histologia': 21, 'infectologia': 22,
+          'medicina legal': 23, 'medicina preventiva': 24, 'microbiologia': 25, 'nefrologia': 26,
+          'neonatologia': 27, 'neuroanatomia': 28, 'neurocirurgia': 29, 'neurologia': 30, 'obstetrícia': 31,
+          'oftalmologia': 32, 'oncologia': 33, 'ortopedia': 34, 'otorrino': 35, 'parasitologia': 36,
+          'patologia': 37, 'pediatria': 38, 'pneumologia': 39, 'primeiros-socorros': 40, 'psquiatria': 41,
+          'radiologia': 41, 'reumatologia': 42, 'semiologia': 43, 'sistema': 44, 'terapia': 45,
+          'urologia': 46, 'clínico geral': 47, 'geral': 48}
+gostou_s = ['sim', 'SIM', 'Sim']
+gostou_n = ['não', 'nao', 'Não', 'NÃO', 'NAO']
+if formado in formado_s:
+    print(f'Perfeito, {nome_cli}! Somos a maior plataforma de educação médica do Brasil, '
+          f'com conteúdos atualizados semananalmente.')
+    curso_cli = input('Me conta sua área de interesse (em letra minúscula), '
+                      'pra que eu possa te mostrar o quanto você poderá aprender com a gente: ')
+    print(f'Excelente! Já tenho inclusive cursos de {curso_cli} em mente pra você fazer uma ótima atualização!')
+    email_cli = input('Me confirma só seu e-mail, por gentileza? '
+                      '(não se preocupe pois, assim como você, odiamos spam): ')
+    print('Perfeito! Obrigado por confirmar!')
+    for i, count in cursos_SF.items():
+        if i in curso_cli:
+            id += count
+            print(f'Dá só uma olhada no que preparamos pra você: {id} (O número representa o link de redirecionamento)')
+            gosto_cli = input(f'E então, {nome_cli}, gostou da primeira aula de {curso_cli}? ')
+            if gosto_cli in gostou_s:
+                print('Maravilha! Para adquirir esse e outros conteúdos, falta pouco!')
+            if gosto_cli in gostou_n:
+                print(f'Sem problemas, {nome_cli}. Você pode experimentar agora vários outros conteúdos no nosso app e '
+                      f'o melhor de tudo: os 7 primeiros dias são gratuitos! :D')
+    else:
+            cartao_cli = int(input('Insira o número do cartão de crédito e comece seu '
+                                   'período de teste por 7 dias GRÁTIS agora mesmo: '))
+            print(f'Excelente, {nome_cli}! Seja muito bem vindo (a)! Aproveite bastante todo nosso conteúdo'
+                  f' e lembre-se: estarei sempre à sua disposição!')
+
+if formado in formado_n:
+    print(f'Perfeito, {nome_cli}! Com mais de 1.600 videoaulas e com uma equipe de professores padrão USP, '
+          f'somos a maior plataforma de educação médica do Brasil!')
+    curso_cli = input('Para que eu possa te mostrar o quanto você poderá aprender com a gente, '
+                      'me fala uma disciplina (em letra minúscula) que você tenha interesse em aprimorar seus estudos: ')
+    print(f'Excelente! Já tenho inclusive cursos de {curso_cli} em mente pra você se aprimorar bastante!')
+    email_cli = input('Me confirma só seu e-mail, por gentileza? '
+                      '(não se preocupe pois, assim como você, odiamos spam): ')
+    print('Perfeito! Obrigado por confirmar!')
+    for i, count in cursos_SF.items():
+        if i in curso_cli:
+            id += count
+            print(f'Dá só uma olhada no que preparamos pra você: {id} (O número representa o link de redirecionamento)')
+            gosto_cli = input(f'E então, {nome_cli}, gostou da primeira aula de {curso_cli}? ')
+            if gosto_cli in gostou_s:
+                print('Maravilha! Para adquirir esse e outros conteúdos, falta pouco!')
+            if gosto_cli in gostou_n:
+                print(f'Sem problemas, {nome_cli}. Você pode experimentar agora vários outros conteúdos no nosso app e  '
+                      f'o melhor de tudo: os 7 primeiros dias são gratuitos! :D')
+    else:
+        cartao_cli = int(input('Insira o número do cartão de crédito e comece seu '
+                               'período de teste por 7 dias GRÁTIS agora mesmo: '))
+        print(f'Excelente, {nome_cli}! Seja muito bem vindo (a)! Aproveite bastante todo nosso conteúdo'
+              f' e lembre-se: estarei sempre à sua disposição!')
